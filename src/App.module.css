@@ -43,6 +43,10 @@ body{
   outline: 0;
 }
 
+.container .leftSide input:disabled{
+  opacity: .5;
+}
+
 .container .leftSide button{
   background-color: #227c9d;
   color: white;
@@ -61,7 +65,55 @@ body{
   opacity: .7;
 }
 
-.container .rightSide{
-  margin-left: 40px;
-  flex: 1;
+.container .leftSide button:disabled{
+  opacity: .5;
 }
+
+.container .rightSide{
+  flex: 1;
+  margin-left: 40px;
+
+  display: flex;
+}
+
+.container .rightSide .grid{
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.container .rightSide .rightBig{
+  flex: 1;
+  display: flex;  
+}
+
+.container .rightSide .rightArrow{
+  position: absolute;
+  background-color: #227c9d;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -35px;
+  margin-top: 145px;
+  transition: all ease .3s;
+}
+
+.container .rightSide .rightArrow:hover{
+  opacity: .7;  
+}
+
+
+
+
+
+
+
+
+
+
+
