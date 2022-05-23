@@ -28,17 +28,17 @@ const App = () => {
     <div className={styles.main}>
       <header>
         <div className={styles.headerContainer}>
-          <img src={poweredImage} alt="" width={150} />
+          <img src={poweredImage} alt="" width={120} />
         </div>
       </header>
       <div className={styles.container}>
       <div className={styles.leftSide}>
-        <h1>Calcule your IMC</h1>
-        <p>IMC e a sigla qpara indice de massa coporea, parametro adotado pela XXX...</p>
+        <h1>Calculate Your BMI</h1>
+        <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. Use the tool below to compute yours.</p>
         
         <input
           type="number"
-          placeholder="Digite a sua altura. Ex: 1.5 (Em metros)"
+          placeholder="Input your height. e.g.: 1.5 (In meters)"
           value={heightField > 0 ? heightField : ''}
           onChange={e => setHeightField(parseFloat(e.target.value))}
           disabled={toShow ? true : false}
@@ -46,13 +46,13 @@ const App = () => {
 
         <input
           type="number"
-          placeholder="Digite o seu peso. Ex: 75.3 (Em Kg)"
+          placeholder="Input your weight. e.g.: 75.3 (In Kg)"
           value={weightField > 0 ? weightField : ''}
           onChange={e => setWeightField(parseFloat(e.target.value))}
           disabled={toShow ? true : false}
         />
 
-        <button onClick={handleCalculeButton} disabled={toShow ? true : false}>Calcular</button>
+        <button onClick={handleCalculeButton} disabled={toShow ? true : false}>Calculate</button>
 
         </div>
         <div className={styles.rightSide}>
